@@ -15,11 +15,11 @@ public class WeatherForecastController : ControllerBase {
     }
     [HttpGet]
     [Route("GetMessagesTest")]
-    public IActionResult GetMessagesTest()
+    public IActionResult GetMessagesTest(string? first)
     {
         return Ok(new
         {
-            message = "Hello from controller test endpoint"
+            message = "Hello from controller test endpoint" + first
         });
     }
 }
